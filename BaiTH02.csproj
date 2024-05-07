@@ -60,6 +60,42 @@
     <Compile Include="UserControls\HomePage\MusicInfoBlock.Designer.cs">
       <DependentUpon>MusicInfoBlock.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HomePage\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HomePage\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LovePage\LoveUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LovePage\LoveUC.Designer.cs">
+      <DependentUpon>LoveUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\MusicInfoBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\MusicInfoBar.Designer.cs">
+      <DependentUpon>MusicInfoBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\PlaylistUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\PlaylistUC.Designer.cs">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\PlaylistFolderBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\PlaylistFolderBar.Designer.cs">
+      <DependentUpon>PlaylistFolderBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\PlaylistUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\PlaylistUC.Designer.cs">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +111,24 @@
     <EmbeddedResource Include="UserControls\HomePage\MusicInfoBlock.resx">
       <DependentUpon>MusicInfoBlock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HomePage\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LovePage\LoveUC.resx">
+      <DependentUpon>LoveUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MusicPage\MusicInfoBar.resx">
+      <DependentUpon>MusicInfoBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MusicPage\PlaylistUC.resx">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlaylistPage\PlaylistFolderBar.resx">
+      <DependentUpon>PlaylistFolderBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlaylistPage\PlaylistUC.resx">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,5 +142,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
