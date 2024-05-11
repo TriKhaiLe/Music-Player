@@ -57,35 +57,32 @@ namespace BaiTH02.Utils
             string genre = comboBox1Type.Text;
             string dataPath = @"D:\Desktop\music_info.txt";
 
+            // đổi tên file ảnh và mp3 theo id
+            string imageFileName = songId + ".jpg";
+            string mp3FileName = songId + ".mp3";
+            
+            // copy file ảnh và mp3 
+            string imageFilePath = DirectoryConsts.IMAGE_FOLDER_PATH + imageFileName;
+            string mp3FilePath = DirectoryConsts.MUSIC_FOLDER_PATH + mp3FileName;
+            
             // Tạo hoặc mở file để ghi
             using (StreamWriter writer = new StreamWriter(dataPath, true))
             {
-
                 // Ghi dữ liệu vào file với định dạng đã cho
                 writer.WriteLine("Id nhạc: " + songId);
+                writer.WriteLine("Tên bài hát: " + songName);
                 writer.WriteLine("Tác giả: " + author);
                 writer.WriteLine("Thể loại: " + genre);
+                writer.WriteLine("Tên ảnh: " + imageFileName);
+                writer.WriteLine("Tên file nhạc: " + mp3FileName);
                 writer.WriteLine(); // Dòng trống để ngăn cách giữa các bản ghi
-
-                // đổi tên file ảnh và mp3 theo id
-                string imageFileName = songId + ".jpg";
-                string mp3FileName = songId + ".mp3";
-
-                // copy file ảnh và mp3 
-                string imageFilePath = DirectoryConsts.IMAGE_FOLDER_PATH + imageFileName;
-                string mp3FilePath = DirectoryConsts.IMAGE_FOLDER_PATH + mp3FileName;
 
                 File.Copy(textBox1ImageUrl.Text, imageFilePath);
                 File.Copy(textBox3FileName.Text, mp3FilePath);
-
-                // Thông báo khi di chuyển file thành công
-                MessageBox.Show("File ảnh và file nhạc đã được di chuyển vào thư mục mới");
-
-
             }
 
             // luu xuong json
-            Song song = new Song(songId, songName, author, genre, textBox1ImageUrl.Text, textBox3FileName.Text, false, false, false);
+            Song song = new Song(songId, songName, author, genre, imageFilePath, mp3FilePath, false, false, false);
             SongServices.AddSong(song);
 
             // xoa du lieu trong cac o text
@@ -100,6 +97,8 @@ namespace BaiTH02.Utils
             id++;
             textBox4Id.Text = id.ToString();
 
+            // Thông báo khi lưu thành công
+            MessageBox.Show("Lưu thành công");
         }
     }
 }
