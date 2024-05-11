@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BaiTH02.UserControls.HomePage;
+using BaiTH02.UserControls.PlaylistPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,33 @@ namespace BaiTH02
         public Form1()
         {
             InitializeComponent();
+            LoadHomeTab();
+        }
+
+        private void PlaylistTab_Click(object sender, EventArgs e)
+        {
+            PlaylistUC playlistUC = new PlaylistUC();
+            playlistUC.Dock = DockStyle.Fill;
+            tempPanel.Controls.Clear();
+            tempPanel.Controls.Add(playlistUC);
+        }
+
+        private void ptbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void HomeTab_Click(object sender, EventArgs e)
+        {
+            LoadHomeTab();
+        }
+
+        private void LoadHomeTab()
+        {
+            UCHome home = new UCHome();
+            home.Dock = DockStyle.Fill;
+            tempPanel.Controls.Clear();
+            tempPanel.Controls.Add(home);
         }
     }
 }

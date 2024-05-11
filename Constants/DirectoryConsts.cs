@@ -8,8 +8,11 @@ namespace BaiTH02.Constants
 {
     public class DirectoryConsts
     {
-        // json file path
+        // song json file path
         public static string SONG_JSON_FILE_PATH = @"Data\music_info.json";
+
+        // playlist json file path
+        public static string PLAYLIST_JSON_FILE_PATH = @"Data\playlist_info.json";
 
         // image folder path stored in the debug folder of the project
         public static string IMAGE_FOLDER_PATH = @"Images\";

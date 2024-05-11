@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BaiTH02.UserControls.MusicPage
 {
-    public partial class PlaylistUC : UserControl
+    public partial class MusicListUC : UserControl
     {
-        public PlaylistUC()
+        public MusicListUC()
         {
             InitializeComponent();
         }

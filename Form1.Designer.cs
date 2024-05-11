@@ -31,31 +31,34 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LoveTab = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PlaylistTab = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MusicTab = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tempPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.HomeTab = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ptbExit = new System.Windows.Forms.PictureBox();
+            this.tempPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoveTab)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlaylistTab)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicTab)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeTab)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,21 +78,32 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.pictureBox3);
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Controls.Add(this.LoveTab);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(552, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(97, 118);
             this.panel10.TabIndex = 6;
             // 
-            // pictureBox3
+            // label4
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(0, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 21);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Home";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LoveTab
+            // 
+            this.LoveTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LoveTab.Location = new System.Drawing.Point(0, 0);
+            this.LoveTab.Name = "LoveTab";
+            this.LoveTab.Size = new System.Drawing.Size(97, 97);
+            this.LoveTab.TabIndex = 0;
+            this.LoveTab.TabStop = false;
             // 
             // panel9
             // 
@@ -101,21 +115,35 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.pictureBox6);
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.PlaylistTab);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(358, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(97, 118);
             this.panel8.TabIndex = 4;
             // 
-            // pictureBox6
+            // label3
             // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(0, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Playlist";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PlaylistTab
+            // 
+            this.PlaylistTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PlaylistTab.Image = ((System.Drawing.Image)(resources.GetObject("PlaylistTab.Image")));
+            this.PlaylistTab.Location = new System.Drawing.Point(0, 0);
+            this.PlaylistTab.Name = "PlaylistTab";
+            this.PlaylistTab.Size = new System.Drawing.Size(97, 97);
+            this.PlaylistTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PlaylistTab.TabIndex = 0;
+            this.PlaylistTab.TabStop = false;
+            this.PlaylistTab.Click += new System.EventHandler(this.PlaylistTab_Click);
             // 
             // panel7
             // 
@@ -127,21 +155,32 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.MusicTab);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(164, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(97, 118);
             this.panel6.TabIndex = 2;
             // 
-            // pictureBox4
+            // label2
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(0, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Home";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MusicTab
+            // 
+            this.MusicTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MusicTab.Location = new System.Drawing.Point(0, 0);
+            this.MusicTab.Name = "MusicTab";
+            this.MusicTab.Size = new System.Drawing.Size(97, 97);
+            this.MusicTab.TabIndex = 0;
+            this.MusicTab.TabStop = false;
             // 
             // panel5
             // 
@@ -154,49 +193,12 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.HomeTab);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(97, 118);
             this.panel4.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(649, 45);
-            this.panel3.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(604, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tempPanel
-            // 
-            this.tempPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tempPanel.Location = new System.Drawing.Point(0, 45);
-            this.tempPanel.Name = "tempPanel";
-            this.tempPanel.Size = new System.Drawing.Size(649, 656);
-            this.tempPanel.TabIndex = 4;
             // 
             // label1
             // 
@@ -207,6 +209,45 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HomeTab
+            // 
+            this.HomeTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HomeTab.Image = ((System.Drawing.Image)(resources.GetObject("HomeTab.Image")));
+            this.HomeTab.Location = new System.Drawing.Point(0, 0);
+            this.HomeTab.Name = "HomeTab";
+            this.HomeTab.Size = new System.Drawing.Size(97, 97);
+            this.HomeTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.HomeTab.TabIndex = 0;
+            this.HomeTab.TabStop = false;
+            this.HomeTab.Click += new System.EventHandler(this.HomeTab_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ptbExit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(649, 45);
+            this.panel3.TabIndex = 3;
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Location = new System.Drawing.Point(604, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(45, 45);
+            this.ptbExit.TabIndex = 0;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            // 
+            // tempPanel
+            // 
+            this.tempPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tempPanel.Location = new System.Drawing.Point(0, 45);
+            this.tempPanel.Name = "tempPanel";
+            this.tempPanel.Size = new System.Drawing.Size(649, 656);
+            this.tempPanel.TabIndex = 4;
             // 
             // Form1
             // 
@@ -221,15 +262,15 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoveTab)).EndInit();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlaylistTab)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicTab)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeTab)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,19 +280,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbExit;
         private System.Windows.Forms.Panel tempPanel;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox LoveTab;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox PlaylistTab;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox MusicTab;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox HomeTab;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

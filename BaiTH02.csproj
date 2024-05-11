@@ -60,7 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PlaylistServices.cs" />
     <Compile Include="Services\SongServices.cs" />
+    <Compile Include="Shared\DataStore.cs" />
     <Compile Include="UserControls\HomePage\MusicInfoBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,11 +87,17 @@
     <Compile Include="UserControls\MusicPage\MusicInfoBar.Designer.cs">
       <DependentUpon>MusicInfoBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MusicPage\PlaylistUC.cs">
+    <Compile Include="UserControls\MusicPage\MusicListUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\MusicPage\PlaylistUC.Designer.cs">
-      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    <Compile Include="UserControls\MusicPage\MusicListUC.Designer.cs">
+      <DependentUpon>MusicListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\AddPlaylistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlaylistPage\AddPlaylistForm.Designer.cs">
+      <DependentUpon>AddPlaylistForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PlaylistPage\PlaylistFolderBar.cs">
       <SubType>UserControl</SubType>
@@ -133,8 +141,11 @@
     <EmbeddedResource Include="UserControls\MusicPage\MusicInfoBar.resx">
       <DependentUpon>MusicInfoBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\MusicPage\PlaylistUC.resx">
-      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\MusicPage\MusicListUC.resx">
+      <DependentUpon>MusicListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlaylistPage\AddPlaylistForm.resx">
+      <DependentUpon>AddPlaylistForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PlaylistPage\PlaylistFolderBar.resx">
       <DependentUpon>PlaylistFolderBar.cs</DependentUpon>

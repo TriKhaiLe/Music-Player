@@ -1,6 +1,6 @@
 ﻿namespace BaiTH02.UserControls.MusicPage
 {
-    partial class PlaylistUC
+    partial class MusicListUC
     {
         /// <summary> 
         /// Required designer variable.

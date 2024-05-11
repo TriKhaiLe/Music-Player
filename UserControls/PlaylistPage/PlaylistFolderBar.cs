@@ -16,5 +16,11 @@ namespace BaiTH02.UserControls.PlaylistPage
         {
             InitializeComponent();
         }
+
+        // load data for playlist folder bar
+        public void LoadData(string name)
+        {
+            label1.Text = name;
+        }
     }
 }

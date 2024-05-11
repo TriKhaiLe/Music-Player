@@ -17,7 +17,7 @@ namespace BaiTH02
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImportInputForm());
+            Application.Run(new Form1());
         }
     }
 }
