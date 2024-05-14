@@ -38,5 +38,13 @@ namespace BaiTH02.Services
             playlists.Add(playlist);
             SavePlaylist(playlists);
         }
+
+        // delete a playlist from json file
+        public static void DeletePlaylist(Guid playlistId)
+        {
+            List<Playlist> playlists = GetPlaylistList();
+            playlists.RemoveAll(p => p.Id == playlistId);
+            SavePlaylist(playlists);
+        }
     }
 }

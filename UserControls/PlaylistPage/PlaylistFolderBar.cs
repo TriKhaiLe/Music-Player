@@ -12,15 +12,37 @@ namespace BaiTH02.UserControls.PlaylistPage
 {
     public partial class PlaylistFolderBar : UserControl
     {
+        public Guid id;
         public PlaylistFolderBar()
         {
             InitializeComponent();
         }
 
         // load data for playlist folder bar
-        public void LoadData(string name)
+        public void LoadData(string name, Guid id)
         {
             label1.Text = name;
+            this.id = id;
         }
+
+        private void ptbDelete_Click(object sender, EventArgs e)
+        {
+            // message box to confirm delete
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this playlist?", "Delete Playlist", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            OnDeleteButtonClick(EventArgs.Empty);
+
+        }
+
+        // Define an event to notify the parent form
+        public event EventHandler DeleteButtonClick;
+
+        protected virtual void OnDeleteButtonClick(EventArgs e)
+        {
+            DeleteButtonClick?.Invoke(this, e);
+        }
+
     }
 }

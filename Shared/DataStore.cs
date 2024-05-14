@@ -54,5 +54,19 @@ namespace BaiTH02.Shared
             }
             PlaylistServices.SavePlaylist(Playlists);
         }
+
+        // delete song
+        public static void DeleteSong(string songId)
+        {
+            Songs.RemoveAll(s => s.Id == songId);
+            SongServices.SaveSong(Songs);
+        }
+
+        // delete playlist
+        public static void DeletePlaylist(Guid playlistId)
+        {
+            Playlists.RemoveAll(p => p.Id == playlistId);
+            PlaylistServices.SavePlaylist(Playlists);
+        }
     }
 }

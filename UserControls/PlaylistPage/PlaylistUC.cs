@@ -39,9 +39,27 @@ namespace BaiTH02.UserControls.PlaylistPage
             {
                 // append playlist to flow layout panel
                 PlaylistFolderBar playlistItem = new PlaylistFolderBar();
-                playlistItem.LoadData(playlist.Name);
+                playlistItem.LoadData(playlist.Name, playlist.Id);
+                playlistItem.DeleteButtonClick += PlaylistControl_DeleteButtonClick;
                 flowLayoutPanel1.Controls.Add(playlistItem);
+            }
+        }
 
+        private void PlaylistControl_DeleteButtonClick(object sender, EventArgs e)
+        {
+            try
+            {
+                // Remove the PlaylistControl from the FlowLayoutPanel
+                if (sender is PlaylistFolderBar playlistControl)
+                {
+                    DataStore.DeletePlaylist(playlistControl.id);
+                    flowLayoutPanel1.Controls.Remove(playlistControl);
+                    playlistControl.Dispose(); // Dispose the control to free resources
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

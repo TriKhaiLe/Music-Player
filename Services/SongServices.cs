@@ -39,5 +39,13 @@ namespace BaiTH02.Services
             songs.Add(song);
             SaveSong(songs);
         }
+
+        // delete a song from json file
+        public static void DeleteSong(string songId)
+        {
+            List<Song> songs = GetSongList();
+            songs.RemoveAll(s => s.Id == songId);
+            SaveSong(songs);
+        }
     }
 }

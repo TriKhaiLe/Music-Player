@@ -21,9 +21,15 @@ namespace BaiTH02.UserControls.PlaylistPage
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // check empty input
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Please enter playlist name");
+                return;
+            }
+
             // add new playlist
             Playlist playlist = new Playlist(textBox1.Text, new List<int>());
-            Services.PlaylistServices.AddPlaylist(playlist);
             DataStore.AddOrUpdatePlaylist(playlist);
             this.Close();
         }
