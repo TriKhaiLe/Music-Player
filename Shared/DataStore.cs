@@ -68,5 +68,17 @@ namespace BaiTH02.Shared
             Playlists.RemoveAll(p => p.Id == playlistId);
             PlaylistServices.SavePlaylist(Playlists);
         }
+
+        // get song by id
+        public static Song GetSongById(string songId)
+        {
+            return Songs.FirstOrDefault(s => s.Id == songId);
+        }
+
+        // get playlist by id
+        public static Playlist GetPlaylistById(Guid playlistId)
+        {
+            return Playlists.FirstOrDefault(p => p.Id == playlistId);
+        }
     }
 }

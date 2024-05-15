@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaiTH02.Entities;
 using BaiTH02.Shared;
+using BaiTH02.UserControls.MusicPage;
 
 namespace BaiTH02.UserControls.PlaylistPage
 {
@@ -17,6 +18,7 @@ namespace BaiTH02.UserControls.PlaylistPage
         public PlaylistUC()
         {
             InitializeComponent();
+            panelPlaylistName.Visible = false;
         }
 
         private void ptbAdd_Click(object sender, EventArgs e)
@@ -41,9 +43,32 @@ namespace BaiTH02.UserControls.PlaylistPage
                 PlaylistFolderBar playlistItem = new PlaylistFolderBar();
                 playlistItem.LoadData(playlist.Name, playlist.Id);
                 playlistItem.DeleteButtonClick += PlaylistControl_DeleteButtonClick;
+                playlistItem.PlaylistDoubleClicked += PlaylistControl_PlaylistDoubleClicked;
                 flowLayoutPanel1.Controls.Add(playlistItem);
             }
         }
+
+        private void PlaylistControl_PlaylistDoubleClicked(object sender, EventArgs e)
+        {
+            if (sender is PlaylistFolderBar playlistControl)
+            {
+                DisplaySongsInPlaylist(playlistControl.id);
+            }
+        }
+
+        private void DisplaySongsInPlaylist(Guid playlistId)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            Playlist playlist = DataStore.GetPlaylistById(playlistId);
+            foreach (string songId in playlist.SongIds)
+            {
+                Song song = DataStore.GetSongById(songId);
+                MusicInfoBar songControl = new MusicInfoBar();
+                songControl.SetMusicInfo(song, false, true, true, true, true);
+                flowLayoutPanel1.Controls.Add(songControl);
+            }
+        }
+
 
         private void PlaylistControl_DeleteButtonClick(object sender, EventArgs e)
         {

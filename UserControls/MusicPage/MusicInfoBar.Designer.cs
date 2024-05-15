@@ -28,127 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ptbCoverImg = new System.Windows.Forms.PictureBox();
+            this.lbSongName = new System.Windows.Forms.Label();
+            this.lbAuthor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ptbDelete = new System.Windows.Forms.PictureBox();
+            this.ptbDownload = new System.Windows.Forms.PictureBox();
+            this.ptbPlay = new System.Windows.Forms.PictureBox();
+            this.ptbFavorite = new System.Windows.Forms.PictureBox();
+            this.ptbAddToPlaylist = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDownload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAddToPlaylist)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ptbCoverImg
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbCoverImg.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbCoverImg.Location = new System.Drawing.Point(5, 5);
+            this.ptbCoverImg.Name = "ptbCoverImg";
+            this.ptbCoverImg.Size = new System.Drawing.Size(100, 100);
+            this.ptbCoverImg.TabIndex = 0;
+            this.ptbCoverImg.TabStop = false;
             // 
-            // label1
+            // lbSongName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lbSongName.AutoSize = true;
+            this.lbSongName.Location = new System.Drawing.Point(111, 17);
+            this.lbSongName.Name = "lbSongName";
+            this.lbSongName.Size = new System.Drawing.Size(44, 16);
+            this.lbSongName.TabIndex = 1;
+            this.lbSongName.Text = "label1";
             // 
-            // label2
+            // lbAuthor
             // 
-            this.label2.Location = new System.Drawing.Point(111, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 51);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2label2label2label2label2label2label2label2label2label2label2label2label2lab" +
+            this.lbAuthor.Location = new System.Drawing.Point(111, 54);
+            this.lbAuthor.Name = "lbAuthor";
+            this.lbAuthor.Size = new System.Drawing.Size(239, 51);
+            this.lbAuthor.TabIndex = 2;
+            this.lbAuthor.Text = "label2label2label2label2label2label2label2label2label2label2label2label2label2lab" +
     "el2label2label2label2label2label2label2label2label2label2label2\r\n\r\n\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.ptbDelete);
+            this.panel1.Controls.Add(this.ptbDownload);
+            this.panel1.Controls.Add(this.ptbPlay);
+            this.panel1.Controls.Add(this.ptbFavorite);
+            this.panel1.Controls.Add(this.ptbAddToPlaylist);
             this.panel1.Location = new System.Drawing.Point(356, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 51);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox5
+            // ptbDelete
             // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox5.Location = new System.Drawing.Point(153, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
+            this.ptbDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbDelete.Location = new System.Drawing.Point(204, 0);
+            this.ptbDelete.Name = "ptbDelete";
+            this.ptbDelete.Size = new System.Drawing.Size(51, 51);
+            this.ptbDelete.TabIndex = 4;
+            this.ptbDelete.TabStop = false;
             // 
-            // pictureBox4
+            // ptbDownload
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Location = new System.Drawing.Point(102, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.ptbDownload.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbDownload.Location = new System.Drawing.Point(153, 0);
+            this.ptbDownload.Name = "ptbDownload";
+            this.ptbDownload.Size = new System.Drawing.Size(51, 51);
+            this.ptbDownload.TabIndex = 3;
+            this.ptbDownload.TabStop = false;
             // 
-            // pictureBox3
+            // ptbPlay
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Location = new System.Drawing.Point(51, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.ptbPlay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbPlay.Location = new System.Drawing.Point(102, 0);
+            this.ptbPlay.Name = "ptbPlay";
+            this.ptbPlay.Size = new System.Drawing.Size(51, 51);
+            this.ptbPlay.TabIndex = 2;
+            this.ptbPlay.TabStop = false;
             // 
-            // pictureBox2
+            // ptbFavorite
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.ptbFavorite.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbFavorite.Location = new System.Drawing.Point(51, 0);
+            this.ptbFavorite.Name = "ptbFavorite";
+            this.ptbFavorite.Size = new System.Drawing.Size(51, 51);
+            this.ptbFavorite.TabIndex = 1;
+            this.ptbFavorite.TabStop = false;
             // 
-            // pictureBox6
+            // ptbAddToPlaylist
             // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Location = new System.Drawing.Point(204, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            this.ptbAddToPlaylist.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbAddToPlaylist.Location = new System.Drawing.Point(0, 0);
+            this.ptbAddToPlaylist.Name = "ptbAddToPlaylist";
+            this.ptbAddToPlaylist.Size = new System.Drawing.Size(51, 51);
+            this.ptbAddToPlaylist.TabIndex = 0;
+            this.ptbAddToPlaylist.TabStop = false;
             // 
             // MusicInfoBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbAuthor);
+            this.Controls.Add(this.lbSongName);
+            this.Controls.Add(this.ptbCoverImg);
             this.Name = "MusicInfoBar";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(620, 110);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDownload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFavorite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAddToPlaylist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,14 +156,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox ptbCoverImg;
+        private System.Windows.Forms.Label lbSongName;
+        private System.Windows.Forms.Label lbAuthor;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox ptbDownload;
+        private System.Windows.Forms.PictureBox ptbPlay;
+        private System.Windows.Forms.PictureBox ptbFavorite;
+        private System.Windows.Forms.PictureBox ptbAddToPlaylist;
+        private System.Windows.Forms.PictureBox ptbDelete;
     }
 }

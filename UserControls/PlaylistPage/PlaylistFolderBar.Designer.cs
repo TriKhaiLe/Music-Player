@@ -103,6 +103,7 @@
             this.Name = "PlaylistFolderBar";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(635, 83);
+            this.DoubleClick += new System.EventHandler(this.PlaylistFolderBar_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDelete)).EndInit();

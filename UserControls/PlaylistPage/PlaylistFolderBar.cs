@@ -44,5 +44,12 @@ namespace BaiTH02.UserControls.PlaylistPage
             DeleteButtonClick?.Invoke(this, e);
         }
 
+        public event EventHandler PlaylistDoubleClicked;
+
+        private void PlaylistFolderBar_DoubleClick(object sender, EventArgs e)
+        {
+            PlaylistDoubleClicked?.Invoke(this, e);
+
+        }
     }
 }
