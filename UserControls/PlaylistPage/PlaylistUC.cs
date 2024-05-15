@@ -52,6 +52,9 @@ namespace BaiTH02.UserControls.PlaylistPage
         {
             if (sender is PlaylistFolderBar playlistControl)
             {
+                panelPlaylistName.Visible = true;
+                labelPlaylistName.Text = playlistControl.name;
+                panelAddPlaylist.Visible = false;
                 DisplaySongsInPlaylist(playlistControl.id);
             }
         }
@@ -91,6 +94,21 @@ namespace BaiTH02.UserControls.PlaylistPage
         private void PlaylistUC_Load(object sender, EventArgs e)
         {
             LoadPlaylist();
+        }
+
+        private void ptbBack_Click(object sender, EventArgs e)
+        {
+            // hide panel playlist name
+            panelPlaylistName.Visible = false;
+            panelAddPlaylist.Visible = true;
+            LoadPlaylist();
+        }
+
+        private void panelAddPlaylist_Click(object sender, EventArgs e)
+        {
+            // call event btnAdd_Click when click on panelAddPlaylist
+            ptbAdd_Click(sender, e);
+
         }
     }
 }

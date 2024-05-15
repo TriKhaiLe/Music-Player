@@ -51,7 +51,8 @@ namespace BaiTH02.UserControls.MusicPage
 
         private void ptbAddToPlaylist_Click(object sender, EventArgs e)
         {
-
+            AddMusicToPlaylistForm addMusicToPlaylistForm = new AddMusicToPlaylistForm(song.Id);
+            addMusicToPlaylistForm.ShowDialog();
         }
     }
 }

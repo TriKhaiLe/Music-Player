@@ -81,6 +81,12 @@
     <Compile Include="UserControls\LovePage\LoveUC.Designer.cs">
       <DependentUpon>LoveUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MusicPage\AddMusicToPlaylistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\AddMusicToPlaylistForm.Designer.cs">
+      <DependentUpon>AddMusicToPlaylistForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\MusicPage\MusicInfoBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LovePage\LoveUC.resx">
       <DependentUpon>LoveUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MusicPage\AddMusicToPlaylistForm.resx">
+      <DependentUpon>AddMusicToPlaylistForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MusicPage\MusicInfoBar.resx">
       <DependentUpon>MusicInfoBar.cs</DependentUpon>

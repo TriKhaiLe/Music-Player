@@ -80,5 +80,19 @@ namespace BaiTH02.Shared
         {
             return Playlists.FirstOrDefault(p => p.Id == playlistId);
         }
+
+        // add song to playlist
+        public static void AddSongToPlaylist(Guid playlistId, string songId)
+        {
+            Playlist playlist = Playlists.FirstOrDefault(p => p.Id == playlistId);
+            if (playlist == null)
+                return;
+
+            if (playlist.SongIds.Contains(songId))
+                return;
+
+            playlist.SongIds.Add(songId);
+            AddOrUpdatePlaylist(playlist);
+        }
     }
 }

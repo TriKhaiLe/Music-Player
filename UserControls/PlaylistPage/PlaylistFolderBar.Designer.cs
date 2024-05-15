@@ -75,6 +75,7 @@
             this.ptbDelete.Image = ((System.Drawing.Image)(resources.GetObject("ptbDelete.Image")));
             this.ptbDelete.Location = new System.Drawing.Point(66, 0);
             this.ptbDelete.Name = "ptbDelete";
+            this.ptbDelete.Padding = new System.Windows.Forms.Padding(6);
             this.ptbDelete.Size = new System.Drawing.Size(51, 51);
             this.ptbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbDelete.TabIndex = 2;
@@ -87,6 +88,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Size = new System.Drawing.Size(51, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;

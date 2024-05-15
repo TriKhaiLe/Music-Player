@@ -159,7 +159,7 @@
             this.Controls.Add(this.ptbCoverImg);
             this.Name = "MusicInfoBar";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(620, 110);
+            this.Size = new System.Drawing.Size(630, 110);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDownload)).EndInit();

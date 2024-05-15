@@ -13,6 +13,7 @@ namespace BaiTH02.UserControls.PlaylistPage
     public partial class PlaylistFolderBar : UserControl
     {
         public Guid id;
+        public string name;
         public PlaylistFolderBar()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace BaiTH02.UserControls.PlaylistPage
         public void LoadData(string name, Guid id)
         {
             label1.Text = name;
+            this.name = name;
             this.id = id;
         }
 
