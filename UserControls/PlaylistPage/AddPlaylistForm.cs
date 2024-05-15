@@ -29,7 +29,7 @@ namespace BaiTH02.UserControls.PlaylistPage
             }
 
             // add new playlist
-            Playlist playlist = new Playlist(textBox1.Text, new List<int>());
+            Playlist playlist = new Playlist(textBox1.Text, new List<string>());
             DataStore.AddOrUpdatePlaylist(playlist);
             this.Close();
         }

@@ -152,6 +152,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PlaylistPage\PlaylistUC.resx">
       <DependentUpon>PlaylistUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Utils\ImportInputForm.resx">
       <DependentUpon>ImportInputForm.cs</DependentUpon>
@@ -170,6 +171,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\icons8-favorite-30.png" />
+    <Content Include="Assets\icons8-love-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

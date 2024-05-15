@@ -1,4 +1,7 @@
-﻿using BaiTH02.UserControls.HomePage;
+﻿using BaiTH02.Entities;
+using BaiTH02.Shared;
+using BaiTH02.UserControls.HomePage;
+using BaiTH02.UserControls.MusicPage;
 using BaiTH02.UserControls.PlaylistPage;
 using System;
 using System.Collections.Generic;
@@ -40,10 +43,27 @@ namespace BaiTH02
 
         private void LoadHomeTab()
         {
+            tempPanel.Controls.Clear();
             UCHome home = new UCHome();
             home.Dock = DockStyle.Fill;
-            tempPanel.Controls.Clear();
             tempPanel.Controls.Add(home);
+        }
+
+        private void MusicTab_Click(object sender, EventArgs e)
+        {
+            tempPanel.Controls.Clear();
+            FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+            flowLayoutPanel.Dock = DockStyle.Fill;
+            flowLayoutPanel.AutoScroll = true;
+            tempPanel.Controls.Add(flowLayoutPanel);
+
+            List<Song> songs = DataStore.Songs;
+            foreach (Song song in songs)
+            {
+                MusicInfoBar musicInfoBar = new MusicInfoBar();
+                musicInfoBar.SetMusicInfo(song, true, true, true, true, false);
+                flowLayoutPanel.Controls.Add(musicInfoBar);
+            }
         }
     }
 }

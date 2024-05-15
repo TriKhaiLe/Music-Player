@@ -73,6 +73,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 701);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.panel1.Size = new System.Drawing.Size(649, 118);
             this.panel1.TabIndex = 0;
             // 
@@ -81,36 +82,40 @@
             this.panel10.Controls.Add(this.label4);
             this.panel10.Controls.Add(this.LoveTab);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(552, 0);
+            this.panel10.Location = new System.Drawing.Point(546, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(97, 118);
+            this.panel10.Size = new System.Drawing.Size(97, 112);
             this.panel10.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 21);
+            this.label4.Size = new System.Drawing.Size(97, 15);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Home";
+            this.label4.Text = "Love";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoveTab
             // 
             this.LoveTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LoveTab.Image = ((System.Drawing.Image)(resources.GetObject("LoveTab.Image")));
             this.LoveTab.Location = new System.Drawing.Point(0, 0);
             this.LoveTab.Name = "LoveTab";
+            this.LoveTab.Padding = new System.Windows.Forms.Padding(6);
             this.LoveTab.Size = new System.Drawing.Size(97, 97);
+            this.LoveTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LoveTab.TabIndex = 0;
             this.LoveTab.TabStop = false;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(455, 0);
+            this.panel9.Location = new System.Drawing.Point(461, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(97, 118);
+            this.panel9.Size = new System.Drawing.Size(97, 112);
             this.panel9.TabIndex = 5;
             // 
             // panel8
@@ -118,17 +123,18 @@
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.PlaylistTab);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(358, 0);
+            this.panel8.Location = new System.Drawing.Point(364, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(97, 118);
+            this.panel8.Size = new System.Drawing.Size(97, 112);
             this.panel8.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 21);
+            this.label3.Size = new System.Drawing.Size(97, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Playlist";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,6 +145,7 @@
             this.PlaylistTab.Image = ((System.Drawing.Image)(resources.GetObject("PlaylistTab.Image")));
             this.PlaylistTab.Location = new System.Drawing.Point(0, 0);
             this.PlaylistTab.Name = "PlaylistTab";
+            this.PlaylistTab.Padding = new System.Windows.Forms.Padding(6);
             this.PlaylistTab.Size = new System.Drawing.Size(97, 97);
             this.PlaylistTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlaylistTab.TabIndex = 0;
@@ -148,9 +155,9 @@
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(261, 0);
+            this.panel7.Location = new System.Drawing.Point(267, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(97, 118);
+            this.panel7.Size = new System.Drawing.Size(97, 112);
             this.panel7.TabIndex = 3;
             // 
             // panel6
@@ -158,36 +165,41 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.MusicTab);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(164, 0);
+            this.panel6.Location = new System.Drawing.Point(170, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(97, 118);
+            this.panel6.Size = new System.Drawing.Size(97, 112);
             this.panel6.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 21);
+            this.label2.Size = new System.Drawing.Size(97, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Home";
+            this.label2.Text = "Music";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MusicTab
             // 
             this.MusicTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MusicTab.Image = ((System.Drawing.Image)(resources.GetObject("MusicTab.Image")));
             this.MusicTab.Location = new System.Drawing.Point(0, 0);
             this.MusicTab.Name = "MusicTab";
+            this.MusicTab.Padding = new System.Windows.Forms.Padding(6);
             this.MusicTab.Size = new System.Drawing.Size(97, 97);
+            this.MusicTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MusicTab.TabIndex = 0;
             this.MusicTab.TabStop = false;
+            this.MusicTab.Click += new System.EventHandler(this.MusicTab_Click);
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(97, 0);
+            this.panel5.Location = new System.Drawing.Point(103, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(67, 118);
+            this.panel5.Size = new System.Drawing.Size(67, 112);
             this.panel5.TabIndex = 1;
             // 
             // panel4
@@ -195,17 +207,18 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.HomeTab);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(6, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(97, 118);
+            this.panel4.Size = new System.Drawing.Size(97, 112);
             this.panel4.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,6 +229,7 @@
             this.HomeTab.Image = ((System.Drawing.Image)(resources.GetObject("HomeTab.Image")));
             this.HomeTab.Location = new System.Drawing.Point(0, 0);
             this.HomeTab.Name = "HomeTab";
+            this.HomeTab.Padding = new System.Windows.Forms.Padding(6);
             this.HomeTab.Size = new System.Drawing.Size(97, 97);
             this.HomeTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomeTab.TabIndex = 0;
@@ -234,9 +248,11 @@
             // ptbExit
             // 
             this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = ((System.Drawing.Image)(resources.GetObject("ptbExit.Image")));
             this.ptbExit.Location = new System.Drawing.Point(604, 0);
             this.ptbExit.Name = "ptbExit";
             this.ptbExit.Size = new System.Drawing.Size(45, 45);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbExit.TabIndex = 0;
             this.ptbExit.TabStop = false;
             this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
@@ -259,6 +275,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
