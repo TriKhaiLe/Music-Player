@@ -16,6 +16,8 @@ namespace BaiTH02.Shared
         public static List<Song> Songs { get; private set; }
         public static List<Playlist> Playlists { get; private set; }
 
+        public static Song PlayingSong { get; set; }
+
         static DataStore()
         {
             LoadData();

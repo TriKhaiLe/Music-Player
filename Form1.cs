@@ -17,6 +17,7 @@ namespace BaiTH02
 {
     public partial class Form1 : Form
     {
+        MusicInfoBar lastPlayedMusic = null;
         public Form1()
         {
             InitializeComponent();
@@ -62,8 +63,29 @@ namespace BaiTH02
             {
                 MusicInfoBar musicInfoBar = new MusicInfoBar();
                 musicInfoBar.SetMusicInfo(song, true, true, true, true, false);
+                musicInfoBar.PlayButtonClick += MusicBlock_PlayButtonClick;
                 flowLayoutPanel.Controls.Add(musicInfoBar);
             }
+        }
+
+        private void MusicBlock_PlayButtonClick(object sender, EventArgs e)
+        {
+            MusicInfoBar musicInfoBar = (MusicInfoBar)sender;
+
+            // update the playing icon of last played music
+            if (lastPlayedMusic != null)
+            {
+                lastPlayedMusic._song.IsPlaying = false;
+                lastPlayedMusic.UpdatePlayButtonImage();
+            }
+            musicInfoBar._song.IsPlaying = true;
+            musicInfoBar.UpdatePlayButtonImage();
+            lastPlayedMusic = musicInfoBar;
+        }
+
+        private void btnPlaycrossfade_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

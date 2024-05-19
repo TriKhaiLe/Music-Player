@@ -109,6 +109,7 @@
             this.ptbPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPlay.TabIndex = 2;
             this.ptbPlay.TabStop = false;
+            this.ptbPlay.Click += new System.EventHandler(this.ptbPlay_Click);
             // 
             // ptbFavorite
             // 
