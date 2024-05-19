@@ -250,9 +250,9 @@
             // 
             // btnPlaycrossfade
             // 
-            this.btnPlaycrossfade.Location = new System.Drawing.Point(492, 12);
+            this.btnPlaycrossfade.Location = new System.Drawing.Point(461, 12);
             this.btnPlaycrossfade.Name = "btnPlaycrossfade";
-            this.btnPlaycrossfade.Size = new System.Drawing.Size(106, 23);
+            this.btnPlaycrossfade.Size = new System.Drawing.Size(137, 23);
             this.btnPlaycrossfade.TabIndex = 1;
             this.btnPlaycrossfade.Text = "Phát crossfade";
             this.btnPlaycrossfade.UseVisualStyleBackColor = true;

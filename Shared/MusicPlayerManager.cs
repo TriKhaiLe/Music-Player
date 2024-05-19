@@ -1,4 +1,5 @@
 ﻿using BaiTH02.Constants;
+using BaiTH02.UserControls.MusicPage;
 using NAudio.Wave;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,8 @@ namespace BaiTH02.Shared
         private static MusicPlayerManager _instance;
         private IWavePlayer _waveOut;
         private AudioFileReader _audioFileReader;
-        private string _currentSongPath;
+        public string _currentSongPath;
+        public MusicInfoBar _lastPlayedMusic = null;
 
         private MusicPlayerManager()
         {
@@ -24,6 +26,19 @@ namespace BaiTH02.Shared
         }
 
         public static MusicPlayerManager Instance => _instance ?? (_instance = new MusicPlayerManager());
+
+        public void UpdateLastPlayedMusic(MusicInfoBar newMusicInfoBar)
+        {
+            if (_lastPlayedMusic != null)
+            {
+                _lastPlayedMusic._song.IsPlaying = false;
+                _lastPlayedMusic.UpdatePlayButtonImage();
+            }
+
+            newMusicInfoBar._song.IsPlaying = true;
+            newMusicInfoBar.UpdatePlayButtonImage();
+            _lastPlayedMusic = newMusicInfoBar;
+        }
 
         public void PlayOrPause(string songPath)
         {

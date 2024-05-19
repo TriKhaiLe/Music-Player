@@ -68,10 +68,19 @@ namespace BaiTH02.UserControls.PlaylistPage
                 Song song = DataStore.GetSongById(songId);
                 MusicInfoBar songControl = new MusicInfoBar();
                 songControl.SetMusicInfo(song, false, true, true, true, true);
+                songControl.PlayButtonClick += MusicBlock_PlayButtonClick;
                 flowLayoutPanel1.Controls.Add(songControl);
+
+                if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
+                    MusicPlayerManager.Instance._lastPlayedMusic = songControl;
             }
         }
 
+        public void MusicBlock_PlayButtonClick(object sender, EventArgs e)
+        {
+            MusicInfoBar musicInfoBar = (MusicInfoBar)sender;
+            MusicPlayerManager.Instance.UpdateLastPlayedMusic(musicInfoBar);
+        }
 
         private void PlaylistControl_DeleteButtonClick(object sender, EventArgs e)
         {
