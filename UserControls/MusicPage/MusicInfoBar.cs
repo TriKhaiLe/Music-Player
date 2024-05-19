@@ -83,5 +83,18 @@ namespace BaiTH02.UserControls.MusicPage
             }
         }
 
+        private void ptbFavorite_Click(object sender, EventArgs e)
+        {
+            if (_song == null)
+                return;
+
+            _song.IsFavorite = !_song.IsFavorite;
+            if (_song.IsFavorite)
+                ptbFavorite.Image = Image.FromFile(DirectoryConsts.FAVORITE_IMAGE_PATH);
+            else
+                ptbFavorite.Image = Image.FromFile(DirectoryConsts.UNFAVORITE_IMAGE_PATH);
+
+            DataStore.AddOrUpdateSong(_song);
+        }
     }
 }

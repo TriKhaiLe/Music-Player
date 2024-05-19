@@ -46,9 +46,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.HomeTab = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnPlaycrossfade = new System.Windows.Forms.Button();
             this.ptbExit = new System.Windows.Forms.PictureBox();
             this.tempPanel = new System.Windows.Forms.Panel();
-            this.btnPlaycrossfade = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoveTab)).BeginInit();
@@ -110,6 +110,7 @@
             this.LoveTab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LoveTab.TabIndex = 0;
             this.LoveTab.TabStop = false;
+            this.LoveTab.Click += new System.EventHandler(this.LoveTab_Click);
             // 
             // panel9
             // 
@@ -247,6 +248,16 @@
             this.panel3.Size = new System.Drawing.Size(649, 45);
             this.panel3.TabIndex = 3;
             // 
+            // btnPlaycrossfade
+            // 
+            this.btnPlaycrossfade.Location = new System.Drawing.Point(492, 12);
+            this.btnPlaycrossfade.Name = "btnPlaycrossfade";
+            this.btnPlaycrossfade.Size = new System.Drawing.Size(106, 23);
+            this.btnPlaycrossfade.TabIndex = 1;
+            this.btnPlaycrossfade.Text = "Phát crossfade";
+            this.btnPlaycrossfade.UseVisualStyleBackColor = true;
+            this.btnPlaycrossfade.Click += new System.EventHandler(this.btnPlaycrossfade_Click);
+            // 
             // ptbExit
             // 
             this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
@@ -266,16 +277,6 @@
             this.tempPanel.Name = "tempPanel";
             this.tempPanel.Size = new System.Drawing.Size(649, 656);
             this.tempPanel.TabIndex = 4;
-            // 
-            // btnPlaycrossfade
-            // 
-            this.btnPlaycrossfade.Location = new System.Drawing.Point(492, 12);
-            this.btnPlaycrossfade.Name = "btnPlaycrossfade";
-            this.btnPlaycrossfade.Size = new System.Drawing.Size(106, 23);
-            this.btnPlaycrossfade.TabIndex = 1;
-            this.btnPlaycrossfade.Text = "Phát crossfade";
-            this.btnPlaycrossfade.UseVisualStyleBackColor = true;
-            this.btnPlaycrossfade.Click += new System.EventHandler(this.btnPlaycrossfade_Click);
             // 
             // Form1
             // 

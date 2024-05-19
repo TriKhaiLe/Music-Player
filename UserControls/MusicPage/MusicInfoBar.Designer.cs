@@ -122,6 +122,7 @@
             this.ptbFavorite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFavorite.TabIndex = 1;
             this.ptbFavorite.TabStop = false;
+            this.ptbFavorite.Click += new System.EventHandler(this.ptbFavorite_Click);
             // 
             // ptbAddToPlaylist
             // 
