@@ -54,28 +54,23 @@ namespace BaiTH02
         private void MusicTab_Click(object sender, EventArgs e)
         {
             tempPanel.Controls.Clear();
-            FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
-            flowLayoutPanel.Dock = DockStyle.Fill;
-            flowLayoutPanel.AutoScroll = true;
-            tempPanel.Controls.Add(flowLayoutPanel);
-
-            List<Song> songs = DataStore.Songs;
-            foreach (Song song in songs)
-            {
-                MusicInfoBar musicInfoBar = new MusicInfoBar();
-                musicInfoBar.SetMusicInfo(song, true, true, true, true, false);
-                musicInfoBar.PlayButtonClick += MusicBlock_PlayButtonClick;
-                flowLayoutPanel.Controls.Add(musicInfoBar);
-
-                if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
-                {
-                    MusicPlayerManager.Instance._lastPlayedMusic = musicInfoBar;
-                    musicInfoBar.ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
-                }
-            }
+            MusicUC musicUC = new MusicUC();
+            musicUC.Dock = DockStyle.Fill;
+            musicUC.MusicItem_Click += MusicItem_Click;
+            tempPanel.Controls.Add(musicUC);
         }
 
-            public void MusicBlock_PlayButtonClick(object sender, EventArgs e)
+        private void MusicItem_Click(object sender, EventArgs e)
+        {
+            Song song = sender as Song;
+            //SongDetailUC songDetail = new SongDetailUC(song);
+            //songDetail.BackButton_Click += SongDetail_BackButton_Click;
+            //pn_UC.Controls[0].Visible = false;
+            //pn_UC.Controls.Add((SongDetailUC)songDetail);
+        }
+
+
+        public void MusicBlock_PlayButtonClick(object sender, EventArgs e)
         {
             MusicInfoBar musicInfoBar = (MusicInfoBar)sender;
             MusicPlayerManager.Instance.UpdateLastPlayedMusic(musicInfoBar);

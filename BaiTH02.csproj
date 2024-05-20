@@ -92,6 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PlaylistServices.cs" />
     <Compile Include="Services\SongServices.cs" />
+    <Compile Include="Services\StringExtensions.cs" />
     <Compile Include="Shared\DataStore.cs" />
     <Compile Include="Shared\MusicPlayerManager.cs" />
     <Compile Include="UserControls\HomePage\MusicInfoBlock.cs">
@@ -129,6 +130,12 @@
     </Compile>
     <Compile Include="UserControls\MusicPage\MusicListUC.Designer.cs">
       <DependentUpon>MusicListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\MusicUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MusicPage\MusicUC.Designer.cs">
+      <DependentUpon>MusicUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PlaylistPage\AddPlaylistForm.cs">
       <SubType>Form</SubType>
@@ -183,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MusicPage\MusicListUC.resx">
       <DependentUpon>MusicListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MusicPage\MusicUC.resx">
+      <DependentUpon>MusicUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PlaylistPage\AddPlaylistForm.resx">
       <DependentUpon>AddPlaylistForm.cs</DependentUpon>

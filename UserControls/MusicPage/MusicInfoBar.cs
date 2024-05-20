@@ -130,5 +130,12 @@ namespace BaiTH02.UserControls.MusicPage
             }
 
         }
+
+        public event EventHandler MusicItemClick;
+        private void MusicInfoItem_Click(object sender, EventArgs e)
+        {
+            MusicItemClick(_song, e);
+        }
+
     }
 }
