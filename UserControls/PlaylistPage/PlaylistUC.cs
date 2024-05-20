@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BaiTH02.Constants;
 using BaiTH02.Entities;
 using BaiTH02.Shared;
 using BaiTH02.UserControls.MusicPage;
@@ -66,13 +67,16 @@ namespace BaiTH02.UserControls.PlaylistPage
             foreach (string songId in playlist.SongIds)
             {
                 Song song = DataStore.GetSongById(songId);
-                MusicInfoBar songControl = new MusicInfoBar();
-                songControl.SetMusicInfo(song, false, true, true, true, true);
-                songControl.PlayButtonClick += MusicBlock_PlayButtonClick;
-                flowLayoutPanel1.Controls.Add(songControl);
+                MusicInfoBar musicInfoBar = new MusicInfoBar();
+                musicInfoBar.SetMusicInfo(song, false, true, true, true, true);
+                musicInfoBar.PlayButtonClick += MusicBlock_PlayButtonClick;
+                flowLayoutPanel1.Controls.Add(musicInfoBar);
 
                 if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
-                    MusicPlayerManager.Instance._lastPlayedMusic = songControl;
+                {
+                    MusicPlayerManager.Instance._lastPlayedMusic = musicInfoBar;
+                    musicInfoBar.ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
+                }
             }
         }
 

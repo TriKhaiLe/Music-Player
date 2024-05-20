@@ -45,10 +45,6 @@ namespace BaiTH02.UserControls.MusicPage
             else
                 ptbFavorite.Image = Image.FromFile(DirectoryConsts.UNFAVORITE_IMAGE_PATH);
 
-            if (song.IsPlaying)
-                ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
-            else
-                ptbPlay.Image = Image.FromFile(DirectoryConsts.UNPLAY_IMAGE_PATH);
         }
 
         private void ptbAddToPlaylist_Click(object sender, EventArgs e)
@@ -63,6 +59,7 @@ namespace BaiTH02.UserControls.MusicPage
         {
             if (_song != null)
             {
+                _song.IsPlayed = true;
                 MusicPlayerManager.Instance.PlayOrPause(_song.FileUrl);
                 UpdatePlayButtonImage();
             }
@@ -70,6 +67,7 @@ namespace BaiTH02.UserControls.MusicPage
             PlayButtonClick?.Invoke(this, e);
         }
 
+        // method to update the icon of the current playing MusicInfoBar
         public void UpdatePlayButtonImage()
         {
             var player = MusicPlayerManager.Instance;

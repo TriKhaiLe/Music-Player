@@ -102,6 +102,7 @@
             // ptbPlay
             // 
             this.ptbPlay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbPlay.Image = ((System.Drawing.Image)(resources.GetObject("ptbPlay.Image")));
             this.ptbPlay.Location = new System.Drawing.Point(103, 0);
             this.ptbPlay.Name = "ptbPlay";
             this.ptbPlay.Padding = new System.Windows.Forms.Padding(5);
@@ -181,7 +182,7 @@
         private System.Windows.Forms.Label lbAuthor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox ptbDownload;
-        private System.Windows.Forms.PictureBox ptbPlay;
+        public System.Windows.Forms.PictureBox ptbPlay;
         private System.Windows.Forms.PictureBox ptbFavorite;
         private System.Windows.Forms.PictureBox ptbAddToPlaylist;
         private System.Windows.Forms.PictureBox ptbDelete;

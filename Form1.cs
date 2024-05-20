@@ -1,4 +1,5 @@
-﻿using BaiTH02.Entities;
+﻿using BaiTH02.Constants;
+using BaiTH02.Entities;
 using BaiTH02.Shared;
 using BaiTH02.UserControls.HomePage;
 using BaiTH02.UserControls.LovePage;
@@ -67,11 +68,14 @@ namespace BaiTH02
                 flowLayoutPanel.Controls.Add(musicInfoBar);
 
                 if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
+                {
                     MusicPlayerManager.Instance._lastPlayedMusic = musicInfoBar;
+                    musicInfoBar.ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
+                }
             }
         }
 
-        public void MusicBlock_PlayButtonClick(object sender, EventArgs e)
+            public void MusicBlock_PlayButtonClick(object sender, EventArgs e)
         {
             MusicInfoBar musicInfoBar = (MusicInfoBar)sender;
             MusicPlayerManager.Instance.UpdateLastPlayedMusic(musicInfoBar);

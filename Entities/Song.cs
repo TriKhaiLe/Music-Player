@@ -16,7 +16,7 @@ namespace BaiTH02.Entities
         public string ImageUrl { get; set; }
         public string FileUrl { get; set; }
         public bool IsFavorite { get; set; }
-        public bool IsPlaying { get; set; }
+        public bool IsPlayed { get; set; }
         public bool IsDownloaded { get; set; }
         public Song()
         {
@@ -27,7 +27,7 @@ namespace BaiTH02.Entities
             ImageUrl = "";
             FileUrl = "";
             IsFavorite = false;
-            IsPlaying = false;
+            IsPlayed = false;
             IsDownloaded = false;
         }
         public Song(string id, string name, string author, string genre, string imageUrl, string fileUrl, bool isFavorite, bool isPlaying, bool isDownloaded)
@@ -39,7 +39,7 @@ namespace BaiTH02.Entities
             ImageUrl = imageUrl;
             FileUrl = fileUrl;
             IsFavorite = isFavorite;
-            IsPlaying = isPlaying;
+            IsPlayed = isPlaying;
             IsDownloaded = isDownloaded;
         }
 
