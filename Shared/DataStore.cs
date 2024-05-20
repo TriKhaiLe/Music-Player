@@ -96,5 +96,27 @@ namespace BaiTH02.Shared
             playlist.SongIds.Add(songId);
             AddOrUpdatePlaylist(playlist);
         }
+
+        // delete song from playlist
+        public static void DeleteSongFromPlaylist(Guid playlistId, string songId)
+        {
+            Playlist playlist = Playlists.FirstOrDefault(p => p.Id == playlistId);
+            if (playlist == null)
+                return;
+
+            playlist.SongIds.Remove(songId);
+            AddOrUpdatePlaylist(playlist);
+        }
+
+        // delete all songs from playlist
+        public static void DeleteAllSongsFromPlaylist(Guid playlistId)
+        {
+            Playlist playlist = Playlists.FirstOrDefault(p => p.Id == playlistId);
+            if (playlist == null)
+                return;
+
+            playlist.SongIds.Clear();
+            AddOrUpdatePlaylist(playlist);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTH02.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,18 @@ namespace BaiTH02.UserControls.PlaylistPage
         private void PlaylistFolderBar_DoubleClick(object sender, EventArgs e)
         {
             PlaylistDoubleClicked?.Invoke(this, e);
+
+        }
+
+        private void ptbDeleteInside_Click(object sender, EventArgs e)
+        {
+            // delete all songs in playlist but keep playlist
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete all songs in this playlist?", "Delete Playlist", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            DataStore.DeleteAllSongsFromPlaylist(id);
+            MessageBox.Show("All songs in playlist have been deleted successfully!");
 
         }
     }
