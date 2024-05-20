@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTH02.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace BaiTH02.UserControls.HomePage
 {
     public partial class MusicInfoBlock : UserControl
     {
-        public MusicInfoBlock()
+        public MusicInfoBlock(Song song)
         {
             InitializeComponent();
+            ptbCoverImg.Image = Image.FromFile(song.ImageUrl);
+            lbName.Text = song.Name;
         }
     }
 }

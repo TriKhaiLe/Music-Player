@@ -60,6 +60,8 @@ namespace BaiTH02.UserControls.MusicPage
             if (_song != null)
             {
                 _song.IsPlayed = true;
+                DataStore.AddOrUpdateSong(_song);
+
                 MusicPlayerManager.Instance.PlayOrPause(_song.FileUrl);
                 UpdatePlayButtonImage();
             }

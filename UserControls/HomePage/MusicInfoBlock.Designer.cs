@@ -28,46 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ptbCoverImg = new System.Windows.Forms.PictureBox();
+            this.lbName = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ptbCoverImg
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 123);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbCoverImg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ptbCoverImg.Location = new System.Drawing.Point(0, 0);
+            this.ptbCoverImg.Name = "ptbCoverImg";
+            this.ptbCoverImg.Size = new System.Drawing.Size(148, 123);
+            this.ptbCoverImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCoverImg.TabIndex = 0;
+            this.ptbCoverImg.TabStop = false;
             // 
-            // label1
+            // lbName
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 83);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Rồi ta sẽ ngắm pháo hoa cùng nhau";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbName.Location = new System.Drawing.Point(0, 123);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(148, 83);
+            this.lbName.TabIndex = 1;
+            this.lbName.Text = "Rồi ta sẽ ngắm pháo hoa cùng nhau";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MusicInfoBlock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.ptbCoverImg);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.Name = "MusicInfoBlock";
             this.Size = new System.Drawing.Size(148, 206);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox ptbCoverImg;
+        private System.Windows.Forms.Label lbName;
     }
 }
