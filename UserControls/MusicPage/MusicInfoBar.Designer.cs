@@ -98,6 +98,7 @@
             this.ptbDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbDownload.TabIndex = 3;
             this.ptbDownload.TabStop = false;
+            this.ptbDownload.Click += new System.EventHandler(this.ptbDownload_Click);
             // 
             // ptbPlay
             // 
