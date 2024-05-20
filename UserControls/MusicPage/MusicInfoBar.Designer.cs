@@ -150,6 +150,7 @@
             this.ptbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbDelete.TabIndex = 5;
             this.ptbDelete.TabStop = false;
+            this.ptbDelete.Click += new System.EventHandler(this.ptbDelete_Click);
             // 
             // MusicInfoBar
             // 

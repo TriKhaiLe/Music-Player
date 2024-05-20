@@ -16,6 +16,7 @@ namespace BaiTH02.UserControls.PlaylistPage
 {
     public partial class PlaylistUC : UserControl
     {
+        PlaylistFolderBar _selectedPlaylist;
         public PlaylistUC()
         {
             InitializeComponent();
@@ -56,6 +57,7 @@ namespace BaiTH02.UserControls.PlaylistPage
                 panelPlaylistName.Visible = true;
                 labelPlaylistName.Text = playlistControl.name;
                 panelAddPlaylist.Visible = false;
+                _selectedPlaylist = playlistControl;
                 DisplaySongsInPlaylist(playlistControl.id);
             }
         }
@@ -70,6 +72,7 @@ namespace BaiTH02.UserControls.PlaylistPage
                 MusicInfoBar musicInfoBar = new MusicInfoBar();
                 musicInfoBar.SetMusicInfo(song, false, true, true, true, true);
                 musicInfoBar.PlayButtonClick += MusicBlock_PlayButtonClick;
+                musicInfoBar.DeleteButtonClick += MusicBlock_DeleteButtonClick;
                 flowLayoutPanel1.Controls.Add(musicInfoBar);
 
                 if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
@@ -84,6 +87,16 @@ namespace BaiTH02.UserControls.PlaylistPage
         {
             MusicInfoBar musicInfoBar = (MusicInfoBar)sender;
             MusicPlayerManager.Instance.UpdateLastPlayedMusic(musicInfoBar);
+        }
+
+        private void MusicBlock_DeleteButtonClick(object sender, EventArgs e)
+        {
+            if (sender is MusicInfoBar musicInfoBar)
+            {
+                DataStore.DeleteSongFromPlaylist(_selectedPlaylist.id, musicInfoBar._song.Id);
+                flowLayoutPanel1.Controls.Remove(musicInfoBar);
+                musicInfoBar.Dispose();
+            }
         }
 
         private void PlaylistControl_DeleteButtonClick(object sender, EventArgs e)

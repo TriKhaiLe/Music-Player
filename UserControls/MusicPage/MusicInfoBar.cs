@@ -137,5 +137,11 @@ namespace BaiTH02.UserControls.MusicPage
             MusicItemClick(_song, e);
         }
 
+        public event EventHandler DeleteButtonClick;
+
+        private void ptbDelete_Click(object sender, EventArgs e)
+        {
+            DeleteButtonClick?.Invoke(this, e);
+        }
     }
 }
