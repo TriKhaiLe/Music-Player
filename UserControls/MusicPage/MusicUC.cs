@@ -82,6 +82,7 @@ namespace BaiTH02.UserControls.MusicPage
             if (e.KeyCode == Keys.Enter)
             {
                 pb_search_Click((object)sender, e);
+                e.SuppressKeyPress = true;
             }
         }
 
