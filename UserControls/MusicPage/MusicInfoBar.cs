@@ -46,6 +46,7 @@ namespace BaiTH02.UserControls.MusicPage
             else
                 ptbFavorite.Image = Image.FromFile(DirectoryConsts.UNFAVORITE_IMAGE_PATH);
 
+            UpdatePlayButtonImage();
         }
 
         private void ptbAddToPlaylist_Click(object sender, EventArgs e)

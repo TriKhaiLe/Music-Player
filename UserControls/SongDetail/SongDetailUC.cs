@@ -33,6 +33,7 @@ namespace BaiTH02.UserControls.SongDetail
             lb_Name.Text = song.Name;
             lb_auther_singer.Text = song.Author;
             loadComments();
+            UpdatePlayButtonImage();
         }
 
         private void loadComments()

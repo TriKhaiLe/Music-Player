@@ -47,7 +47,6 @@ namespace BaiTH02.UserControls.MusicPage
                     if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
                     {
                         MusicPlayerManager.Instance._lastPlayedMusic = MusicInfoBar;
-                        MusicInfoBar.ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
                     }
                 }
             }
