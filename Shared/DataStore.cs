@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace BaiTH02.Shared
@@ -93,10 +94,14 @@ namespace BaiTH02.Shared
                 return;
 
             if (playlist.SongIds.Contains(songId))
+            {
+                MessageBox.Show("Song already exists in this playlist");
                 return;
+            }
 
             playlist.SongIds.Add(songId);
             AddOrUpdatePlaylist(playlist);
+            MessageBox.Show("Add song to playlist successfully");
         }
 
         // delete song from playlist

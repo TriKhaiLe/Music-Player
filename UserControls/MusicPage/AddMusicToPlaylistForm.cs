@@ -37,7 +37,6 @@ namespace BaiTH02.UserControls.MusicPage
             // add song to playlist
             Guid playlistId = DataStore.Playlists[comboBox1.SelectedIndex].Id;
             DataStore.AddSongToPlaylist(playlistId, songId);
-            MessageBox.Show("Add song to playlist successfully");
             this.Close();
         }
     }
