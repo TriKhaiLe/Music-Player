@@ -42,6 +42,7 @@
             this.ptbCoverImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbCoverImg.TabIndex = 0;
             this.ptbCoverImg.TabStop = false;
+            this.ptbCoverImg.Click += new System.EventHandler(this.MusicInfoItem_Click);
             // 
             // lbName
             // 
@@ -52,6 +53,7 @@
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Rồi ta sẽ ngắm pháo hoa cùng nhau";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbName.Click += new System.EventHandler(this.MusicInfoItem_Click);
             // 
             // MusicInfoBlock
             // 

@@ -56,6 +56,7 @@
             this.ptbCoverImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbCoverImg.TabIndex = 0;
             this.ptbCoverImg.TabStop = false;
+            this.ptbCoverImg.Click += new System.EventHandler(this.MusicInfoItem_Click);
             // 
             // lbSongName
             // 
@@ -65,6 +66,7 @@
             this.lbSongName.Size = new System.Drawing.Size(44, 16);
             this.lbSongName.TabIndex = 1;
             this.lbSongName.Text = "label1";
+            this.lbSongName.Click += new System.EventHandler(this.MusicInfoItem_Click);
             // 
             // lbAuthor
             // 
@@ -75,6 +77,7 @@
             this.lbAuthor.Text = "label2label2label2label2label2label2label2label2label2label2label2label2label2lab" +
     "el2label2label2label2label2label2label2label2label2label2label2\r\n\r\n\r\n";
             this.lbAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAuthor.Click += new System.EventHandler(this.MusicInfoItem_Click);
             // 
             // panel1
             // 
@@ -165,6 +168,7 @@
             this.Name = "MusicInfoBar";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(630, 110);
+            this.Click += new System.EventHandler(this.MusicInfoItem_Click);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCoverImg)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDownload)).EndInit();

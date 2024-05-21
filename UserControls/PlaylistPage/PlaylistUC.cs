@@ -73,6 +73,7 @@ namespace BaiTH02.UserControls.PlaylistPage
                 musicInfoBar.SetMusicInfo(song, false, true, true, true, true);
                 musicInfoBar.PlayButtonClick += MusicBlock_PlayButtonClick;
                 musicInfoBar.DeleteButtonClick += MusicBlock_DeleteButtonClick;
+                musicInfoBar.MusicItemClick += MusicItemClick;
                 flowLayoutPanel1.Controls.Add(musicInfoBar);
 
                 if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
@@ -136,5 +137,12 @@ namespace BaiTH02.UserControls.PlaylistPage
             ptbAdd_Click(sender, e);
 
         }
+
+        public event EventHandler MusicItem_Click;
+        public void MusicItemClick(object sender, EventArgs e)
+        {
+            MusicItem_Click(sender, e);
+        }
+
     }
 }

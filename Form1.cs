@@ -5,6 +5,7 @@ using BaiTH02.UserControls.HomePage;
 using BaiTH02.UserControls.LovePage;
 using BaiTH02.UserControls.MusicPage;
 using BaiTH02.UserControls.PlaylistPage;
+using BaiTH02.UserControls.SongDetail;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,7 @@ namespace BaiTH02
             PlaylistUC playlistUC = new PlaylistUC();
             playlistUC.Dock = DockStyle.Fill;
             tempPanel.Controls.Clear();
+            playlistUC.MusicItem_Click += MusicItem_Click;
             tempPanel.Controls.Add(playlistUC);
         }
 
@@ -48,6 +50,7 @@ namespace BaiTH02
             tempPanel.Controls.Clear();
             UCHome home = new UCHome();
             home.Dock = DockStyle.Fill;
+            home.MusicItem_Click += MusicItem_Click;
             tempPanel.Controls.Add(home);
         }
 
@@ -63,10 +66,16 @@ namespace BaiTH02
         private void MusicItem_Click(object sender, EventArgs e)
         {
             Song song = sender as Song;
-            //SongDetailUC songDetail = new SongDetailUC(song);
-            //songDetail.BackButton_Click += SongDetail_BackButton_Click;
-            //pn_UC.Controls[0].Visible = false;
-            //pn_UC.Controls.Add((SongDetailUC)songDetail);
+            SongDetailUC songDetail = new SongDetailUC(song);
+            songDetail.Dock = DockStyle.Fill;
+            songDetail.BackButton_Click += SongDetail_BackButton_Click;
+            tempPanel.Controls[0].Visible = false;
+            tempPanel.Controls.Add(songDetail);
+        }
+
+        private void SongDetail_BackButton_Click(object sender, EventArgs e)
+        {
+            tempPanel.Controls[0].Visible = true;
         }
 
 
@@ -85,6 +94,7 @@ namespace BaiTH02
         {
             LoveUC loveUC = new LoveUC();
             loveUC.Dock = DockStyle.Fill;
+            loveUC.MusicItem_Click += MusicItem_Click;
             tempPanel.Controls.Clear();
             tempPanel.Controls.Add(loveUC);
         }

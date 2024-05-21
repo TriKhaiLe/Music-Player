@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\DirectoryConsts.cs" />
+    <Compile Include="Entities\Comment.cs" />
     <Compile Include="Entities\Playlist.cs" />
     <Compile Include="Entities\Song.cs" />
     <Compile Include="Form1.cs">
@@ -93,6 +94,7 @@
     <Compile Include="Services\PlaylistServices.cs" />
     <Compile Include="Services\SongServices.cs" />
     <Compile Include="Services\StringExtensions.cs" />
+    <Compile Include="Shared\CommentRepo.cs" />
     <Compile Include="Shared\DataStore.cs" />
     <Compile Include="Shared\MusicPlayerManager.cs" />
     <Compile Include="UserControls\HomePage\MusicInfoBlock.cs">
@@ -155,6 +157,18 @@
     <Compile Include="UserControls\PlaylistPage\PlaylistUC.Designer.cs">
       <DependentUpon>PlaylistUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SongDetail\CommentItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SongDetail\CommentItem.Designer.cs">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SongDetail\SongDetailUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SongDetail\SongDetailUC.Designer.cs">
+      <DependentUpon>SongDetailUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\ImportInputForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +186,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControls\HomePage\MusicInfoBlock.resx">
       <DependentUpon>MusicInfoBlock.cs</DependentUpon>
@@ -205,6 +220,12 @@
       <DependentUpon>PlaylistUC.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SongDetail\CommentItem.resx">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SongDetail\SongDetailUC.resx">
+      <DependentUpon>SongDetailUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utils\ImportInputForm.resx">
       <DependentUpon>ImportInputForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +246,10 @@
   <ItemGroup>
     <Content Include="Assets\icons8-favorite-30.png" />
     <Content Include="Assets\icons8-love-30.png" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\male.png" />
+    <None Include="Resources\star_outline.png" />
+    <None Include="Resources\star_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WMPLib">

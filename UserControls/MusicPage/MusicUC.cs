@@ -1,4 +1,5 @@
-﻿using BaiTH02.Entities;
+﻿using BaiTH02.Constants;
+using BaiTH02.Entities;
 using BaiTH02.Services;
 using BaiTH02.Shared;
 using System;
@@ -44,7 +45,10 @@ namespace BaiTH02.UserControls.MusicPage
                     fpn_musics.Controls.Add(MusicInfoBar);
 
                     if (song.FileUrl == MusicPlayerManager.Instance._currentSongPath)
+                    {
                         MusicPlayerManager.Instance._lastPlayedMusic = MusicInfoBar;
+                        MusicInfoBar.ptbPlay.Image = Image.FromFile(DirectoryConsts.PLAYING_IMAGE_PATH);
+                    }
                 }
             }
         }

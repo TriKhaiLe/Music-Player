@@ -14,6 +14,9 @@ namespace BaiTH02.Constants
         // playlist json file path
         public static string PLAYLIST_JSON_FILE_PATH = @"Data\playlist_info.json";
 
+        // comments json file path
+        public static string COMMENTS_JSON_FILE_PATH = @"Data\comments_info.json";
+
         // image folder path stored in the debug folder of the project
         public static string IMAGE_FOLDER_PATH = @"Images\";
 

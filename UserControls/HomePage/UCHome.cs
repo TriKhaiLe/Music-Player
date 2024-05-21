@@ -37,6 +37,7 @@ namespace BaiTH02.UserControls.HomePage
                 if (song.IsPlayed)
                 {
                     MusicInfoBlock musicInfoBlock = new MusicInfoBlock(song);
+                    musicInfoBlock.MusicItemClick += MusicItemClick;
                     flowLayoutPanel1.Controls.Add(musicInfoBlock);
                 }
             }
@@ -59,6 +60,7 @@ namespace BaiTH02.UserControls.HomePage
                 if (song.IsDownloaded)
                 {
                     MusicInfoBlock musicInfoBlock = new MusicInfoBlock(song);
+                    musicInfoBlock.MusicItemClick += MusicItemClick;
                     flowLayoutPanel1.Controls.Add(musicInfoBlock);
                 }
             }
@@ -68,6 +70,12 @@ namespace BaiTH02.UserControls.HomePage
 
             // set bg of recently label to bg color of this form
             llRecently.BackColor = this.BackColor;
+        }
+
+        public event EventHandler MusicItem_Click;
+        public void MusicItemClick(object sender, EventArgs e)
+        {
+            MusicItem_Click(sender, e);
         }
     }
 }

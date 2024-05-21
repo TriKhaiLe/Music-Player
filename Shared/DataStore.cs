@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BaiTH02.Shared
 {
@@ -15,8 +16,8 @@ namespace BaiTH02.Shared
     {
         public static List<Song> Songs { get; private set; }
         public static List<Playlist> Playlists { get; private set; }
-
         public static Song PlayingSong { get; set; }
+        public static List<Comment> Comments { get; private set; }
 
         static DataStore()
         {
@@ -27,6 +28,7 @@ namespace BaiTH02.Shared
         {
             Songs = SongServices.GetSongList();
             Playlists = PlaylistServices.GetPlaylistList();
+            Comments = CommentRepo.GetCommentsList();
         }
 
         // add or update song
@@ -117,6 +119,17 @@ namespace BaiTH02.Shared
 
             playlist.SongIds.Clear();
             AddOrUpdatePlaylist(playlist);
+        }
+
+        public static void AddComment(Comment comment)
+        {
+            Comments.Add(comment);
+            CommentRepo.AddComment(comment);
+        }
+
+        public static List<Comment> GetCommentListBySongId(string songId)
+        {
+            return Comments.Where(x => x.songId == songId).ToList();
         }
     }
 }
