@@ -19,6 +19,7 @@ namespace BaiTH02.Shared
         private AudioFileReader _audioFileReader;
         public string _currentSongPath;
         public MusicInfoBar _lastPlayedMusic = null;
+        private float _currentVolume = 1.0f;
 
         private MusicPlayerManager()
         {
@@ -69,6 +70,33 @@ namespace BaiTH02.Shared
                 _audioFileReader = new AudioFileReader(songPath);
                 _waveOut.Init(_audioFileReader);
                 _waveOut.Play();
+            }
+        }
+        public void Play(string songPath)
+        {
+            if (_currentSongPath == songPath && _waveOut.PlaybackState == PlaybackState.Playing)
+            {
+                return; // Already playing the current song
+            }
+
+            Stop(); // Stop current playback
+            _currentSongPath = songPath;
+
+            _audioFileReader = new AudioFileReader(songPath)
+            {
+                Volume = _currentVolume
+            };
+
+            _waveOut.Init(_audioFileReader);
+            _waveOut.Play();
+        }
+
+        public void SetVolume(int volume)
+        {
+            _currentVolume = volume / 100f;
+            if (_audioFileReader != null)
+            {
+                _audioFileReader.Volume = _currentVolume;
             }
         }
 
